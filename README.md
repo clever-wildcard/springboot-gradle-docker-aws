@@ -64,5 +64,18 @@ $ aws ecs register-task-definition --cli-input-json file://taskdef.json >> taskd
 
 After the task definition is registered, edit your file to remove the image name and include the <IMAGE1_NAME> placeholder text in the image field.
 
-$ rm taskdef.json
+later, you can see if you can actually delete taskdef.json at this point. keep it, and keep it in your code repo for now.
 
+vpc-d50782be
+
+subnet-b16872cb
+
+subnet-fb15b890
+
+sg-49ec413a
+
+target-group-1 arn: arn:aws:elasticloadbalancing:us-east-2:761280559302:targetgroup/target-group-1/b2be20e2fe56ff95
+
+$ aws ecs create-service --service-name springboot-gradle-docker-aws --cli-input-json file://create-service.json
+
+$ aws ecs describe-services --cluster springboot-gradle-docker-aws --services springboot-gradle-docker-aws
