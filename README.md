@@ -60,6 +60,8 @@ paste:
         "family": "springboot-gradle-docker-aws"
     }
 
+change cpu to 1024 and memory to 2048
+
 $ aws ecs register-task-definition --cli-input-json file://taskdef.json >> taskdefoutput.json
 
 After the task definition is registered, edit your file to remove the image name and include the <IMAGE1_NAME> placeholder text in the image field.
