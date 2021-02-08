@@ -1,6 +1,6 @@
 package com.company.springbootgradledockeraws;
 
-public class Comment {
+public class Example {
     private String name;
     private String content;
 

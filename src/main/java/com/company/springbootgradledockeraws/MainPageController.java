@@ -1,5 +1,6 @@
 package com.company.springbootgradledockeraws;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainPageController {
 
 //    @RequestMapping("/hello")
-    @GetMapping("/hello")
-    public String get() {
-        return "Hello!";
+    @GetMapping("/add-example")
+    public String addExample() {
+        return "addexample!";
     }
 
 
