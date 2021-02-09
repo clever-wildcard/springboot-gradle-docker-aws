@@ -10,13 +10,21 @@ $ docker run -p 8080:8080 springboot-gradle-docker-aws:latest
 
 $ docker tag springboot-gradle-docker-aws:latest 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws:latest
 
+$ aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws
+
 $ docker push 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws
 
 $ ssh -i ~/codebase/MyKeyPair.pem ec2-user@ec2-3-22-239-41.us-east-2.compute.amazonaws.com
 
-$ sudo docker pull 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws:latest -d --name springboot-gradle-docker-aws
+$ aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws
 
-$ sudo docker run -p 80:80 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws:latest -d --name springboot-gradle-docker-aws
+$ sudo docker pull 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws:latest
+
+$ sudo docker stop springboot-gradle-docker-aws && sudo docker rm springboot-gradle-docker-aws
+
+
+
+$ sudo docker run -d --name springboot-gradle-docker-aws -p 80:80 761280559302.dkr.ecr.us-east-2.amazonaws.com/springboot-gradle-docker-aws:latest >> output.txt
 
 ### Instructions for the first time you contribute:
 
@@ -42,7 +50,7 @@ $ docker tag springboot-gradle-docker-aws:latest 761280559302.dkr.ecr.us-east-2.
 
 Install aws cli v2: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 
-Let's say you're not the root user of this aws account. Then the next thing you'd want to do is ask the root user on the account (me, in this case) to be added to the IAM Users groups 'administrators'. Then the root user would get back to you with the console sign in link and/or an aws_access_key_id/aws_secret_access_key.
+Let's say you're not the root user of this aws employee. Then the next thing you'd want to do is ask the root user on the employee (me, in this case) to be added to the IAM Users groups 'administrators'. Then the root user would get back to you with the console sign in link and/or an aws_access_key_id/aws_secret_access_key.
 
 $ cd ~/.aws && ls
 
@@ -117,11 +125,11 @@ Get and set up git on your local machine.
 
     Instructions here.
 
-Make an AWS account.
+Make an AWS employee.
     
     Instructions here.
 
-Make an aws admin account.
+Make an aws admin employee.
 
     instructions here.
 
@@ -129,7 +137,7 @@ Install aws cli v2.
 
     https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
     
-    Let's say you're not the root user of this aws account. Then the next thing you'd want to do is ask the root user on the account (me, in this case) to be added to the IAM Users groups 'administrators'. Then the root user would get back to you with the console sign in link and/or an aws_access_key_id/aws_secret_access_key.
+    Let's say you're not the root user of this aws employee. Then the next thing you'd want to do is ask the root user on the employee (me, in this case) to be added to the IAM Users groups 'administrators'. Then the root user would get back to you with the console sign in link and/or an aws_access_key_id/aws_secret_access_key.
     
     $ cd ~/.aws && ls
     

@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+<style>
+    body {
+        margin: 50px;
+    }
+
+    .w3-codespan {
+        color: darkblue;
+    }
+</style>
 <body>
-<p>Curiouser and curiouser</p>
-<p>words</p>
-<p>are wind</p>
+<p>This app was built / deployed using Spring Boot, Gradle, Docker, and Amazon Web Service.
+    To check out the source code or build / deployment process, head to
+    <a href="https://github.com/clever-wildcard/springboot-gradle-docker-aws"> https://github.com/clever-wildcard/springboot-gradle-docker-aws</a>.</p>
+<hr>
+<p>REST sample: Create, get, replace, delete employees.</p>
+<p />
+
+<div class="w3-codespan">
+    <p>Create an employee:</p>
+    <p>POST</p>
+    <p>http://annaofalltrades.com/employees<p>
+    <p>{'name': 'Anna Soto', 'role': 'Software Engineer'}</p>
+    <p />
+</div>
+
+<div class="w3-codespan">
+    <p>Get all employees:</p>
+    <p>GET</p>
+    <p><a href="http://annaofalltrades.com/employees">http://annaofalltrades.com/employees</a></p>
+    <p />
+</div>
+
+<div class="w3-codespan">
+    <p>Get a single employee:</p>
+    <p>GET</p>
+    <p href="http://annaofalltrades.com/employees/{id_number}">http://annaofalltrades.com/employees/{id number}<p>
+    <p />
+</div>
+
+<div class="w3-codespan">
+    <p>Replace an employee:</p>
+    <p>PUT</p>
+    <p>http://annaofalltrades.com/employees/replace/{id number}<p>
+    <p>{"name": "Curious the Cat", "role": "Companion"}</p>
+    <p />
+</div>
+
+<div class="w3-codespan">
+    <p>Delete an employee:</p>
+    <p>DELETE</p>
+    <p>http://annaofalltrades.com/employees/{id number}<p>
+    <p />
+</div>
 </body>
 </html>
